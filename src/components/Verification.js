@@ -8,7 +8,9 @@ function Verification() {
   return (
     <div className='verification'>
         <Title >OTP Verification</Title>
-        <VerifyCode text="Email OTP sent to div**********"/>
+        <VerifyCode text="Email OTP sent to div**********@gmail.com"/>
+        <VerifyCode text="Mobile OTP sent to 03********45"/>
+
     </div>
   )
 }

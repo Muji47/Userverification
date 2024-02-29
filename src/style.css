@@ -12,17 +12,12 @@
             width: 20px;
             height: 20px;
   }
-  .ant-steps-item-finish .ant-steps-item-icon{
-    border-color: #8920aa !important;
+  .ant-steps-item-finish .ant-steps-item-icon > .ant-steps-icon .ant-steps-icon-dot{
+    background-color: #8920aa  !important;
   }
-  .ant-steps-item-finish .ant-steps-item-icon > .ant-steps-icon{
-    color: #8920aa !important;
-  }
-  .ant-steps-item-process > .ant-steps-item-container > .ant-steps-item-icon{
-    background-color: #8920aa !important;
-  }
-  .ant-steps-item-process .ant-steps-item-icon{
-    border:none !important;
+  .ant-steps-item-process .ant-steps-item-icon > .ant-steps-icon .ant-steps-icon-dot{
+    background-color:#8920aa  !important;
+    display: inline-block;
   }
   .custom-checkbox .ant-checkbox-checked .ant-checkbox-inner {
     background-color: #8920aa; 
