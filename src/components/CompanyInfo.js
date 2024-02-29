@@ -106,7 +106,7 @@ function CompanyInfo() {
       </Select>
     </Col>
   </Row>
-  <Button style={{padding:"10px 15px",backgroundColor:"#8920aa", color:"white", float:"right", height:"3rem", width:"10rem", borderRadius:"10px", margin:"5px 0"}}>Save & Next</Button>
+  <Button className="page-btn">Save & Next</Button>
     </div>
   );
 }

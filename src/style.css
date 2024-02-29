@@ -5,7 +5,8 @@
     align-items: center;
 }
 .verification {
-    margin: 10rem auto;
+    margin: 12rem auto;
+    width: 50%;
 }
   .custom-checkbox .ant-checkbox .ant-checkbox-inner{
             border-color:#8920aa;
@@ -48,4 +49,33 @@
       .ant-btn:hover, .ant-btn:focus, .ant-btn:active{
         border-color: #8920aa  !important;
       }
+      .email-border{
+        border: double 10px ;
+        border-top: none;
+        border-right: none;
+      }
+      .tick-icon{
+        font-size: 5rem;
+        margin: 0 10px;
+        color: rgb(56, 199, 56);
+      }
+      .page-btn{
+        padding:10px 15px !important;
+        background-color:#8920aa !important;
+        color:white !important;
+        float:right;
+         height:3rem !important;
+         width:10rem !important;
+         border-radius:10px !important;
+          margin:2rem 2rem !important;
+        }
+        .skip{
+          float: right;
+          width: 6rem !important;
+         }
+         .back-btn{
+          float: left;
+         }
+         
+      
     
