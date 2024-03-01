@@ -1,19 +1,26 @@
 import React from 'react'
-import { Row,Col, Typography,Dropdown} from 'antd'
-import InputField from './InputField'
-import { CaretDownOutlined } from '@ant-design/icons'
+import {  Typography,Button} from 'antd'
+import InviteFields from './InviteFields'
+import '../style.css'
+
+
 
 function InviteUser() {
     const {Title,Text}=Typography
+    const position2={
+      position:"absolute",
+      bottom:"10px",
+      right:"10px"
+    }
+    
   return (
-    <div style={{margin:"15rem auto",width:"70%"}}>
+    <div className='verification'>
         <Title>Invite User</Title>
         <Text>3 User are allowed for selected packages</Text>
-         <Row>
-      <Col flex="1 1 200px"><InputField/></Col>
-      <Col flex="0 1 300px">   
-      </Col>
-    </Row>
+        <InviteFields label="User 1"/>
+        <InviteFields label="User 2"/>
+        <InviteFields label="User 3"/>
+        <Button className='page-btn' style={position2} htmlType='submit'>Save & Next</Button>
     </div>
   )
 }

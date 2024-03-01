@@ -1,38 +1,46 @@
-import { Image, Steps} from 'antd';
+import { Steps} from 'antd';
 import React from 'react'
 import '../style.css'
 
-function Navbar() {
+function Navbar({setCurrent,current}) {
+  
+  
   return (
     <div className="header">
         <img src='./logo.png' width={"140px"} alt="Logo"/>
         <Steps
       progressDot
-      current={1}
+      current={current}
+      onChange={setCurrent}
       style={{width:"60%"}}
       items={[
         {
-          title: 'Finished',
-          description: 'This is a description.',
+          title: 'first',
+         
         },
         {
-          title: 'In Progress',
-          description: 'This is a description.',
+          title: 'Second',
+         
         },
         {
-          title: 'In Progress',
-          description: 'This is a description.',
+          title: 'Third',
+          
         },
         {
-          title: 'In Progress',
-          description: 'This is a description.',
+          title: 'Fourth',
+          
         },
         {
-          title: 'Waiting',
-          description: 'This is a description.',
+          title: 'Fifth',
+         
+        },
+        {
+          title: 'Last',
+         
         },
       ]}
     />
+   
     </div>
   )
 }

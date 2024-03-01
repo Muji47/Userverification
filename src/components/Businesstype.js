@@ -11,7 +11,7 @@ function Businesstype() {
        }
   return (
     <div>
-    <div className='verification'style={{marginTop:"25rem"}}>
+    <div className='verification'>
         <Title>Select Business Type</Title>
         <Text>Select the best suited business type. This section will effect the default setting for your YAZO setup</Text>
         <Row style={{margin:"30px 0"}}>
@@ -21,7 +21,6 @@ function Businesstype() {
             <Col offset={2}><Showimgdata src="./juices&drinks.jpg" businessName="Juices & Drinks" imageSize={imageSize}/></Col>
         </Row>
     </div>
-    <BackForwardBtn/>
     </div>
   )
 }

@@ -1,24 +1,42 @@
-import { ToTopOutlined } from "@ant-design/icons";
-import { Checkbox, Row, Col, Typography,Select, Button} from "antd";
+import { ToTopOutlined,CaretDownOutlined } from "@ant-design/icons";
+import { Checkbox, Row, Col,Select, Button, Upload, Form} from "antd";
 import React, { useState } from "react";
 import "../style.css";
 import InputField from "./InputField";
 
 function CompanyInfo() {
 
-    const {Option}=Select
   const [checkedValue, setCheckedValue] = useState(null);
 
   const onChange = (e) => {
     setCheckedValue(e.target.checked ? e.target.value : null);
   };
   const adjustInput = {
-    margin: "5px 0",
     borderRadius: "10px",
   };
+  const options = [
+    {
+      label:"Australia"
+    },
+    {
+      label:"India"
+    },
+    {
+      label:"Pakistan"
+    },
+    {
+      label:"Iraq"
+    }
+  ];
+  const position2={
+    position:"absolute",
+    bottom:"10px",
+    right:"10px"
+  }
 
   return (
     <div style={{ width: "70%", margin: "auto" }}>
+      <Form>
       <Row>
         <Col span={6}>
           <Checkbox
@@ -39,7 +57,10 @@ function CompanyInfo() {
           >
             Individual
           </Checkbox>
+          <Form.Item name="Company Name" rules={[{ required: true, message: 'Please input!' }]}>
           <InputField placeholder="Company Name" style={adjustInput} className="inputData" />
+    </Form.Item>
+    <Form.Item name="Company Person Name" rules={[{ required: true, message: 'Please input!' }]}>
           <InputField
             placeholder="Company Person Name"
             size="large"
@@ -47,66 +68,77 @@ function CompanyInfo() {
             allowClear
             className="inputData"
           />
+          </Form.Item>
         </Col>
         <Col
           span={3}
           offset={15}
           style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            backgroundColor: "#8920aa",
-            borderRadius:"10px",
+            cursor:"pointer",
           }}
         >
+          <Upload maxCount={1} listType="picture">
           <ToTopOutlined
             style={{
-              fontSize: "5rem",
+              fontSize: "6rem",
               color: "white",
+              backgroundColor: "#8920aa",
+              borderRadius:"10px",
+              display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
             }}
           />
+          Upload Company Logo
+          </Upload>
         </Col>
       </Row>
       <Row>
         <Col xs={4} sm={6} md={8} lg={10}>
-          <InputField placeholder="Email" style={adjustInput} className="inputData"/>
+        <Form.Item name="Email" rules={[{ required: true, message: 'Please input!' }]}>
+          <InputField placeholder="Email" style={adjustInput} className="inputData" type={"email"}/></Form.Item>
         </Col>
         <Col xs={4} sm={6} md={8} lg={10} offset={4}>
-          <InputField placeholder="Phone" style={adjustInput} className="inputData"/>
+        <Form.Item name="Phone" rules={[{ required: true, message: 'Please input!' }]}>
+          <InputField placeholder="Phone" style={adjustInput} className="inputData" type={"number"}/></Form.Item>
         </Col>
       </Row>
       <Row>
         <Col span={24}>
-          <InputField placeholder="Address 1" style={adjustInput} className="inputData"/>
+        <Form.Item name="Address 1" rules={[{ required: true, message: 'Please input!' }]}>
+          <InputField placeholder="Address 1" style={adjustInput} className="inputData"/></Form.Item>
         </Col>
       </Row>
       <Row>
         <Col span={24}>
-          <InputField placeholder="Address 2" style={adjustInput} className="inputData"/>
+        <Form.Item name="Address 2" rules={[{ required: true, message: 'Please input!' }]}>
+          <InputField placeholder="Address 2" style={adjustInput} className="inputData"/></Form.Item>
         </Col>
       </Row>
       <Row>
     <Col xs={{ span: 5}} lg={{ span: 6}}>
-    <InputField placeholder="City" style={adjustInput} className="inputData"/>
+    <Form.Item name="City" rules={[{ required: true, message: 'Please input!' }]}>
+    <InputField placeholder="City" style={adjustInput} className="inputData"/></Form.Item>
     </Col>
     <Col xs={{ span: 11, offset: 1 }} lg={{ span: 6, offset: 3 }}>
-    <InputField placeholder="Zip code" style={adjustInput} className="inputData"/>
+    <Form.Item name="Zip Code" rules={[{ required: true, message: 'Please input!' }]}>
+    <InputField placeholder="Zip code" style={adjustInput} className="inputData"/></Form.Item>
     </Col>
     <Col lg={{ span: 6, offset: 3 }}>
     <Select
-        style={{width:"100%",
-        borderRadius: "10px",
-        margin: "5px 0",
-    }}
-        size="large"
-        className="inputData"
-      >
-        <Option value="Sign Up">Sign Up</Option>
-        <Option value="Sign In">Sign In</Option>
-      </Select>
+    className="inputData"
+          size={"middle"}
+          defaultValue="Australia"
+          style={{
+            width: 200,
+          }}
+          options={options}
+          
+        />
     </Col>
   </Row>
-  <Button className="page-btn">Save & Next</Button>
+  <Button className='page-btn' style={position2} htmlType='submit'>Save & Next</Button>
+  </Form>
     </div>
   );
 }

@@ -2,7 +2,7 @@ import React from 'react'
 import { Space, Typography } from 'antd'
 import InputField from './InputField'
 
-function VerifyCode({text,icon}) {
+function VerifyCode({text,icon,cross}) {
     const {Text}=Typography
     const widthInput={
         width:"40px",
@@ -23,6 +23,7 @@ function VerifyCode({text,icon}) {
         </Space>
         </div>
         {icon}
+        {cross}
     </div>
   )
 }

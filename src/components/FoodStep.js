@@ -16,20 +16,19 @@ function FoodStep() {
     }
   return (
     <div>
-    <div style={{ width:"75%", margin :"30rem auto",marginBottom:"0rem"}}>
-        <Row style={{margin:"30px 0"}} >
-            <Col offset={2}><Showimgdata src="./coffee.jpg" businessName="Coffe Setup" imageSize={imageSize}/></Col>
-            <Col offset={2}><Showimgdata src="./pizza.jpg" businessName="Pizza Setup"imageSize={imageSize}/></Col>
-            <Col offset={2}><Showimgdata src="./ice&juice.jpg" businessName="Ice & Juices Setup" imageSize={imageSize}/></Col>
-            <Col offset={2}><Showimgdata src="./southindianfood.jpg" businessName="South Indian Food"imageSize={imageSize}/></Col>
+    <div className='verification' style={{width:"60%"}}>
+        <Row >
+            <Col offset={1}><Showimgdata src="./coffee.jpg" businessName="Coffe Setup" imageSize={imageSize}/></Col>
+            <Col offset={1}><Showimgdata src="./pizza.jpg" businessName="Pizza Setup"imageSize={imageSize}/></Col>
+            <Col offset={1}><Showimgdata src="./ice&juice.jpg" businessName="Ice & Juices Setup" imageSize={imageSize}/></Col>
+            <Col offset={1}><Showimgdata src="./southindianfood.jpg" businessName="South Indian Food"imageSize={imageSize}/></Col>
         </Row>
         <Row style={{margin:"20px 0"}} >
-            <Col offset={2}><Showimgdata src="./turkishfood.jpg" businessName="Turkish Food" imageSize={lowerImage}/></Col>
-            <Col offset={3}><Showimgdata src="./bakery.jpg" businessName="Bread & Bakery" imageSize={lowerImage}/></Col>
-            <Col offset={3}><Showimgdata src="./drive&thru.jpg" businessName="Drive Thru Cafe" imageSize={lowerImage}/></Col>
+            <Col offset={1}><Showimgdata src="./turkishfood.jpg" businessName="Turkish Food" imageSize={lowerImage}/></Col>
+            <Col offset={2}><Showimgdata src="./bakery.jpg" businessName="Bread & Bakery" imageSize={lowerImage}/></Col>
+            <Col offset={2}><Showimgdata src="./drive&thru.jpg" businessName="Drive Thru Cafe" imageSize={lowerImage}/></Col>
         </Row>
     </div>
-        <BackForwardBtn/>
         </div>
   )
 }
