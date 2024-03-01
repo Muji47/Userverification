@@ -132,3 +132,14 @@
 .ant-select:not(.ant-select-customize-input) .ant-select-selector{
   border-radius: 10px !important;
 }
+.custom-dropdown .ant-select-item {
+  margin: auto;
+  width: 90%;
+  border-bottom: solid 1px #8920aa ;
+}
+.custom-dropdown{
+  border-color: #8920aa;
+  border: 1px solid #8920aa;
+  position: absolute;
+  border-top: none;
+}

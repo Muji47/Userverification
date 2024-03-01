@@ -12,7 +12,11 @@ import Confirmation from './components/Confirmation';
 function App() {
   const [current,setCurrent]=useState(0)
   const handleNext = () => {
-    setCurrent(current + 1);
+    if(current===5){
+      setCurrent(0)
+    }
+    else{
+    setCurrent(current + 1)}
   };
   const section=[
     <CompanyInfo/>,

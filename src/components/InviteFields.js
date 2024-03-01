@@ -1,17 +1,21 @@
 import React from 'react'
 import { Col,Row,Form,Select } from 'antd'
-import { CaretDownOutlined } from '@ant-design/icons'
 import InputField from './InputField'
 
 
 function InviteFields({label}) {
-    const options = [];
-    for (let i = 10; i < 36; i++) {
-      options.push({
-        value: i.toString(36) + i,
-        label: i.toString(36) + i,
-      });
-    }
+    const options = [
+        {
+            label:"POS User"
+          },
+          {
+            label:"Cashier"
+          },
+          {
+            label:"Account"
+          }
+    ];
+    
   return (
     <Form layout='vertical'>
     <Row>
@@ -19,13 +23,15 @@ function InviteFields({label}) {
       <Select
     className="inputData"
           size={"large"}
-          defaultValue="a1"
+          defaultValue="User Type"
           style={{
             width: 200,
             margin:"auto 20px ",
             borderRadius: "10px",
+            
           }}
           options={options}
+          dropdownClassName="custom-dropdown"
         />   
     </Row>
     </Form>

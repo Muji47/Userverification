@@ -127,12 +127,13 @@ function CompanyInfo() {
     <Col lg={{ span: 6, offset: 3 }}>
     <Select
     className="inputData"
-          size={"middle"}
+          size={"large"}
           defaultValue="Australia"
           style={{
-            width: 200,
+            width: 280,
           }}
           options={options}
+          dropdownClassName="custom-dropdown"
           
         />
     </Col>
