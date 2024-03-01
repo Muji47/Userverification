@@ -15,27 +15,27 @@ function Navbar({setCurrent,current}) {
       style={{width:"60%"}}
       items={[
         {
-          title: 'first',
+          title: 'Customer information',
          
         },
         {
-          title: 'Second',
+          title: 'Customer verification',
          
         },
         {
-          title: 'Third',
+          title: 'Select usiness',
           
         },
         {
-          title: 'Fourth',
+          title: 'Shop setup',
           
         },
         {
-          title: 'Fifth',
+          title: 'Add users',
          
         },
         {
-          title: 'Last',
+          title: 'Complete Resgistration',
          
         },
       ]}

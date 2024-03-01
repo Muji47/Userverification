@@ -1,6 +1,5 @@
 import React from 'react'
-import { Space, Typography } from 'antd'
-import InputField from './InputField'
+import { Input, Space, Typography } from 'antd'
 
 function VerifyCode({text,icon,cross}) {
     const {Text}=Typography
@@ -14,12 +13,12 @@ function VerifyCode({text,icon,cross}) {
       <div>
         <Text  style={{display:"block"}}>{text}</Text>
         <Space>
-        <InputField type={"number"} style={widthInput}/>
-        <InputField type={"number"} style={widthInput}/>
-        <InputField type={"number"} style={widthInput}/>
-        <InputField type={"number"} style={widthInput}/>
-        <InputField type={"number"} style={widthInput}/>
-        <InputField type={"number"} style={widthInput}/>
+        <Input type={"number"} style={widthInput} max={1}/>
+        <Input type={"number"} style={widthInput} max={1}/>
+        <Input type={"number"} style={widthInput} max={1}/>
+        <Input type={"number"} style={widthInput} max={1}/>
+        <Input type={"number"} style={widthInput} max={1}/>
+        <Input type={"number"} style={widthInput} max={1}/>
         </Space>
         </div>
         {icon}

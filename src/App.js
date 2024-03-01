@@ -18,12 +18,16 @@ function App() {
     else{
     setCurrent(current + 1)}
   };
+  const onFinish=(values)=>{
+    console.log(values)
+    setCurrent(current+1)
+  }
   const section=[
-    <CompanyInfo/>,
+    <CompanyInfo onFinish={onFinish}/>,
     <Verification handleNext={handleNext}/>,
     <Businesstype/>,
     <FoodStep/>,
-    <InviteUser/>,
+    <InviteUser onFinish={onFinish}/>,
     <Confirmation/>
   ]
   
