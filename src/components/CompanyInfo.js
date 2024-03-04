@@ -72,8 +72,8 @@ function CompanyInfo({onFinish}) {
             </Form.Item>
           </Col>
           <Col
-          xs={3} sm={5} md={9}
-            lg={5}
+          xs={3} sm={5} md={7}
+            lg={6}
             className="uploadIcon"
           >
             <Upload maxCount={1} listType="picture">
