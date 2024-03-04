@@ -33,17 +33,13 @@ function CompanyInfo({onFinish}) {
       label: "Iraq",
     },
   ];
-  const position2 = {
-    position: "absolute",
-    bottom: "10px",
-    right: "10px",
-  };
-
+  
   return (
-    <div style={{ width: "70%", margin: "auto" }}>
+    <div style={{ width: "78%", margin: "auto" }}>
       <Form onFinish={onFinish} onFinishFailed={onFinishFailed}>
-        <Row>
-          <Col span={6}>
+        <Row  justify={"space-between"} gutter={6}>
+          <Col xs={4} sm={6} md={8} lg={11}>
+            <div style={{display:"flex",justifyContent:"space-around",marginBottom:"20px"}}>
             <Checkbox
               value="Company"
               checked={checkedValue === "Company"}
@@ -62,6 +58,7 @@ function CompanyInfo({onFinish}) {
             >
               Individual
             </Checkbox>
+            </div>
             <Form.Item
               name="Company Name"
               rules={[{ required: true, message: "Please enter company name!" }]}
@@ -70,17 +67,14 @@ function CompanyInfo({onFinish}) {
             </Form.Item>
             <Form.Item
               name="Company Person Name"
-              rules={[{ required: true, message: "Please enter name!" }]}
             >
               <Input allowClear style={adjustInput} placeholder="Company Person Name" size='large' className="inputData"/>
             </Form.Item>
           </Col>
           <Col
-            span={3}
-            offset={15}
-            style={{
-              cursor: "pointer",
-            }}
+          xs={3} sm={5} md={9}
+            lg={5}
+            className="uploadIcon"
           >
             <Upload maxCount={1} listType="picture">
               <ToTopOutlined
@@ -98,8 +92,8 @@ function CompanyInfo({onFinish}) {
             </Upload>
           </Col>
         </Row>
-        <Row>
-          <Col xs={4} sm={6} md={8} lg={10}>
+        <Row justify={"space-between"} gutter={6}>
+          <Col xs={4} sm={6} md={8} lg={11}>
             <Form.Item
               name="Email"
               rules={[{ required: true,type:"email", message: "Please enter email!" }]}
@@ -107,12 +101,11 @@ function CompanyInfo({onFinish}) {
               <Input allowClear style={adjustInput} placeholder="Email" size='large' className="inputData"/>
             </Form.Item>
           </Col>
-          <Col xs={4} sm={6} md={8} lg={10} offset={4}>
+          <Col xs={4} sm={6} md={8} lg={11}>
             <Form.Item
               name="Phone"
-              rules={[{ required: true,type:"number" ,message: "Please enter phone no!" }]}
             >
-              <Input allowClear style={adjustInput} placeholder="Phone" size='large' className="inputData"/>
+              <Input allowClear type="number" style={adjustInput} placeholder="Phone" size='large' className="inputData"/>
             </Form.Item>
           </Col>
         </Row>
@@ -120,7 +113,6 @@ function CompanyInfo({onFinish}) {
           <Col span={24}>
             <Form.Item
               name="Address 1"
-              rules={[{ required: true, message: "Please enter address!" }]}
             >
               <Input allowClear style={adjustInput} placeholder="Address 1" size='large' className="inputData"/>
             </Form.Item>
@@ -130,14 +122,13 @@ function CompanyInfo({onFinish}) {
           <Col span={24}>
             <Form.Item
               name="Address 2"
-              rules={[{ required: true, message: "Please enter address!" }]}
             >
               <Input allowClear style={adjustInput} placeholder="Address 2" size='large' className="inputData"/>
             </Form.Item>
           </Col>
         </Row>
-        <Row>
-          <Col xs={{ span: 5 }} lg={{ span: 6 }}>
+        <Row gutter={12} justify="space-between">
+          <Col xs={{ span: 5 }} lg={{ span: 7 }}>
             <Form.Item
               name="City"
               rules={[{ required: true, message: "Please enter city!" }]}
@@ -145,7 +136,7 @@ function CompanyInfo({onFinish}) {
               <Input allowClear style={adjustInput} placeholder="City" size='large' className="inputData"/>
             </Form.Item>
           </Col>
-          <Col xs={{ span: 11, offset: 1 }} lg={{ span: 6, offset: 3 }}>
+          <Col xs={{ span: 5 }} lg={{ span: 7, offset: 1 }}>
             <Form.Item
               name="Zip Code"
               rules={[{ required: true, message: "Please enter zip code!" }]}
@@ -153,23 +144,22 @@ function CompanyInfo({onFinish}) {
                <Input allowClear style={adjustInput} placeholder="Zip code" size='large' className="inputData"/>
             </Form.Item>
           </Col>
-          <Col lg={{ span: 6, offset: 3 }}>
+          <Col xs={{ span: 5 }} lg={{ span: 7, offset: 1 }}>
             <Form.Item>
             <Select
               className="inputData"
               size={"large"}
               defaultValue="Australia"
-              style={{
-                width: 280,
-              }}
               options={options}
               popupClassName="custom-dropdown"
+              placement="bottomLeft"
+              rules={[{ required: true, message: "Please enter select country!" }]}
             />
             </Form.Item>
           </Col>
         </Row>
-        <Form.Item style={position2}>
-        <Button className="page-btn"  htmlType="submit">
+        <Form.Item >
+        <Button className="page-btn infoBtn"  htmlType="submit">
           Save & Next
         </Button>
         </Form.Item>

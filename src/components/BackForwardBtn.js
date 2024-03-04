@@ -9,12 +9,12 @@ function BackForwardBtn({current,handleNext,handlePrev}) {
   const position1={
     position:"absolute",
     bottom:"10px",
-    left:"10px"
+    left:"10%"
   }
   const position2={
     position:"absolute",
     bottom:"10px",
-    right:"10px"
+    right:"10%"
   }
   if(current===0){
   backButton=false
@@ -27,6 +27,7 @@ function BackForwardBtn({current,handleNext,handlePrev}) {
   }
   return (
     <>
+    
     {backButton&&<Button className='page-btn back-btn' style={position1} onClick={handlePrev}>Back</Button>}
     {forwardButton&&<Button className='page-btn' style={position2} htmlType='submit' onClick={handleNext}>{submitButton}</Button>}
     </>

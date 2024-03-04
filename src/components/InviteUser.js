@@ -7,7 +7,7 @@ function InviteUser({ onFinish }) {
   const position2 = {
     position: "absolute",
     bottom: "10px",
-    right: "10px",
+    right: "10%",
   };
   const onFinishFailed = (errorInfo) => {
     console.log("Failed:", errorInfo);
@@ -44,12 +44,18 @@ function InviteUser({ onFinish }) {
           <Form.Item
             label={"User 1"}
             name="user1"
-            rules={[{ required: true, message: "Please input!" }]}
+            rules={[
+              {
+                required: true,
+                type: "email",
+                message: "Please enter valid email!",
+              },
+            ]}
           >
             <Input
               allowClear
               style={adjustInput}
-              placeholder="Zip code"
+              placeholder="Email"
               size="large"
               className="inputData"
             />
@@ -58,6 +64,12 @@ function InviteUser({ onFinish }) {
             className="inputData"
             size={"large"}
             defaultValue="User Type"
+            rules={[
+              {
+                required: true,
+                message: "Please select one!",
+              },
+            ]}
             style={{
               width: 200,
               margin: "auto 20px ",
@@ -65,18 +77,24 @@ function InviteUser({ onFinish }) {
             }}
             options={options}
             popupClassName="custom-dropdown"
-          />{" "}
+          />
         </Space>
         <Space>
           <Form.Item
             label={"User 2"}
             name="user2"
-            rules={[{ required: true, message: "Please input!" }]}
+            rules={[
+              {
+                required: true,
+                type: "email",
+                message: "Please enter valid email!",
+              },
+            ]}
           >
             <Input
               allowClear
               style={adjustInput}
-              placeholder="Zip code"
+              placeholder="Email"
               size="large"
               className="inputData"
             />
@@ -85,6 +103,12 @@ function InviteUser({ onFinish }) {
             className="inputData"
             size={"large"}
             defaultValue="User Type"
+            rules={[
+              {
+                required: true,
+                message: "Please select one!",
+              },
+            ]}
             style={{
               width: 200,
               margin: "auto 20px ",
@@ -98,12 +122,18 @@ function InviteUser({ onFinish }) {
           <Form.Item
             label={"User 3"}
             name="user3"
-            rules={[{ required: true, message: "Please input!" }]}
+            rules={[
+              {
+                required: true,
+                type: "email",
+                message: "Please enter valid email!",
+              },
+            ]}
           >
             <Input
               allowClear
               style={adjustInput}
-              placeholder="Zip code"
+              placeholder="Email"
               size="large"
             />
           </Form.Item>
@@ -111,6 +141,12 @@ function InviteUser({ onFinish }) {
             className="inputData"
             size={"large"}
             defaultValue="User Type"
+            rules={[
+              {
+                required: true,
+                message: "Please select one!",
+              },
+            ]}
             style={{
               width: 200,
               margin: "auto 20px ",
@@ -121,7 +157,7 @@ function InviteUser({ onFinish }) {
           />
         </Space>
         <Button className="page-btn" style={position2} htmlType="submit">
-          Save & Next
+          Almost & Finish
         </Button>
       </Form>
     </div>

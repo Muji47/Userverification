@@ -7,12 +7,12 @@ function Navbar({setCurrent,current}) {
   
   return (
     <div className="header">
-        <img src='./logo.png' width={"140px"} alt="Logo"/>
+        <img src='./asset/logo.png' width={"140px"} alt="Logo"/>
         <Steps
       progressDot
       current={current}
       onChange={setCurrent}
-      style={{width:"60%"}}
+      style={{width:"70%"}}
       items={[
         {
           title: 'Customer information',
@@ -23,7 +23,7 @@ function Navbar({setCurrent,current}) {
          
         },
         {
-          title: 'Select usiness',
+          title: 'Select Business',
           
         },
         {
