@@ -175,7 +175,7 @@
   float: left;
 }
 
-.ant-steps-item-finish>.ant-steps-item-container>.ant-steps-item-tail::after {
+.ant-steps-item-finish>.ant-steps-item-container>.ant-steps-item-tail::after,.ant-btn-primary {
   background-color: #8920aa !important;
 }
 
@@ -243,5 +243,3 @@
   cursor: pointer;
   padding-left: 7rem !important;
 }
-
-.invitePageBtn {}
