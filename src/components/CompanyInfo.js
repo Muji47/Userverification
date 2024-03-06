@@ -72,9 +72,8 @@ function CompanyInfo({onFinish}) {
             </Form.Item>
           </Col>
           <Col
-          xs={3} sm={5} md={7}
-            lg={6}
             className="uploadIcon"
+            style={{ textAlign: 'right' }}
           >
             <Upload maxCount={1} listType="picture">
               <ToTopOutlined
