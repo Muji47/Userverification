@@ -20,7 +20,7 @@ function VerifyCode({ text, icon, cross, disabled }) {
     setOpenModal(false);
   };
   const formatInput = (value) => {
-    return String(value).replace(/[^0-9]/g, '');
+    return value.replace(/[^0-9]/g, '');
   };
   return (
     <>
@@ -87,7 +87,7 @@ function VerifyCode({ text, icon, cross, disabled }) {
       >
         Resend Code
       </Typography.Text>
-      {opeModal && (
+      {opeModal &&!disabled&& (
         <InformationMessage showModal={handleCode} closeModal={closeModal} />
       )}
     </>
