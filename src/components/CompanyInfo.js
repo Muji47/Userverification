@@ -134,10 +134,15 @@ function CompanyInfo({ onFinish }) {
           </Col>
           <Col
             className="uploadIcon"
+            xs={4} sm={6} md={8} lg={12}
+            style={{
+          display:"flex",
+          justifyContent:"end"
+        }}
           >
             <Upload
               maxCount={1}
-              listType="picture"
+              listType="picture" 
               beforeUpload={handleBeforeUpload}
               showUploadList={upload ? true : false}
             >
