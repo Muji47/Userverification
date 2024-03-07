@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { InputNumber, Space, Typography } from "antd";
 import InformationMessage from "./Modal";
 import "../style.css";
 
 function VerifyCode({ text, icon, cross, disabled }) {
+  const [modal,setModal]=useState(false)
   const { Text } = Typography;
   const widthInput = {
     width: "40px",
@@ -12,8 +13,17 @@ function VerifyCode({ text, icon, cross, disabled }) {
     margin: "10px 0",
   };
   
-
-
+  const showModal=()=>{
+    setModal(true)
+  }
+  const closeModal=()=>{
+    setModal(false)
+  }
+  const handleKeyDown = (event) => {
+    if (!(event.key >= '0' && event.key <= '9') && event.key !== 'Backspace' && event.key !== 'Delete' && event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') {
+      event.preventDefault();
+    }
+  };
 
   return (
     <>
@@ -28,6 +38,7 @@ function VerifyCode({ text, icon, cross, disabled }) {
               style={widthInput}
               controls={false}
               disabled={disabled}
+              onKeyDown={handleKeyDown}
             />
             <InputNumber
               maxLength={1}
@@ -36,6 +47,7 @@ function VerifyCode({ text, icon, cross, disabled }) {
               style={widthInput}
               controls={false}
               disabled={disabled}
+              onKeyDown={handleKeyDown}
             />
             <InputNumber
               maxLength={1}
@@ -43,6 +55,7 @@ function VerifyCode({ text, icon, cross, disabled }) {
               style={widthInput}
               controls={false}
               disabled={disabled}
+              onKeyDown={handleKeyDown}
             />
             <InputNumber
               maxLength={1}
@@ -50,6 +63,7 @@ function VerifyCode({ text, icon, cross, disabled }) {
               style={widthInput}
               controls={false}
               disabled={disabled}
+              onKeyDown={handleKeyDown}
             />
             <InputNumber
               maxLength={1}
@@ -57,6 +71,7 @@ function VerifyCode({ text, icon, cross, disabled }) {
               style={widthInput}
               controls={false}
               disabled={disabled}
+              onKeyDown={handleKeyDown}
             />
             <InputNumber
               maxLength={1}
@@ -64,6 +79,7 @@ function VerifyCode({ text, icon, cross, disabled }) {
               style={widthInput}
               controls={false}
               disabled={disabled}
+              onKeyDown={handleKeyDown}
               
             />
           </Space>
@@ -73,11 +89,14 @@ function VerifyCode({ text, icon, cross, disabled }) {
       </div>
       <Typography.Text
         className="Verification-Text"
-        onClick={InformationMessage}
+        onClick={showModal}
         disabled={disabled}
       >
         Resend Code
       </Typography.Text>
+      {
+        modal&&!disabled&&<InformationMessage/>
+      }
     </>
   );
 }
