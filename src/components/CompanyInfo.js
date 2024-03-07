@@ -158,8 +158,8 @@ function CompanyInfo({ onFinish }) {
                 }}
               />
               Upload Company Logo
-              <Typography.Text style={{ display: "block",fontSize:"10px",float:"right" }}>
-                800x600px
+              <Typography.Text style={{ display: "block",fontSize:"10px",textAlign:"right"}}>
+                800x600
               </Typography.Text>
             </Upload>
           </Col>
