@@ -8,7 +8,6 @@ import {
   Upload,
   Form,
   Input,
-  InputNumber,
   Typography,
   message,
 } from "antd";
@@ -135,15 +134,15 @@ function CompanyInfo({ onFinish }) {
           </Col>
           <Col
             className="uploadIcon"
-            xs={4} sm={6} md={8} lg={12}
-            style={{
-          display:"flex",
-          justifyContent:"end"
-        }}
+            style={{ textAlign: "right" }}
+            xs={4}
+            sm={6}
+            md={8}
+            lg={12}
           >
             <Upload
               maxCount={1}
-              listType="picture" 
+              listType="picture"
               beforeUpload={handleBeforeUpload}
               showUploadList={upload ? true : false}
             >
@@ -159,8 +158,8 @@ function CompanyInfo({ onFinish }) {
                 }}
               />
               Upload Company Logo
-              <Typography.Text style={{ display: "block",fontSize:"10px",textAlign:"right"}}>
-                800x600
+              <Typography.Text style={{ display: "block" }}>
+                800x600px
               </Typography.Text>
             </Upload>
           </Col>
@@ -191,9 +190,10 @@ function CompanyInfo({ onFinish }) {
               name="Phone"
          
             >
-              <InputNumber
+              <Input
                 addonBefore="+61"
                 maxLength={10}
+                min={0}
                 style={{
                   width: "100%",
                   
