@@ -1,11 +1,10 @@
-import { Modal } from "antd";
 
-const InformationMessage = ({closeModal}) => {
-  
-  let secondsToGo = 2;
+import { Modal } from 'antd';
+const countDown = () => {
+  let secondsToGo = 5;
   const modal = Modal.success({
-    title: 'Resend Code',
-    content: `Wait! for 30 sec verification code sending to you.`,
+    title: 'Resend code',
+    content: `Wait for 30 sec verification code is sending to your email.`,
   });
   const timer = setInterval(() => {
     secondsToGo -= 1;
@@ -13,7 +12,7 @@ const InformationMessage = ({closeModal}) => {
   setTimeout(() => {
     clearInterval(timer);
     modal.destroy();
-    closeModal()
+
   }, secondsToGo * 1000);
 };
-export default InformationMessage;
+export default countDown
