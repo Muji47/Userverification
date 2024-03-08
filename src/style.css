@@ -16,7 +16,9 @@
 .custom-checkbox {
   width: 100%;
 }
-
+.ant-form-item-label>label.ant-form-item-required:not(.ant-form-item-required-mark-optional)::before{
+  display: none !important;
+}
 .custom-checkbox .ant-checkbox .ant-checkbox-inner {
   border-color: #8920aa;
   width: 20px;
