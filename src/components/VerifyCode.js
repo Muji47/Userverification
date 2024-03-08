@@ -1,7 +1,8 @@
-import React, { useState } from "react";
-import { InputNumber, Space, Typography } from "antd";
-import InformationMessage from "./Modal";
+import React from "react";
+import { Input, Space, Typography } from "antd";
+import countDown from "./Modal"
 import "../style.css";
+import { useState } from "react";
 
 function VerifyCode({ text, icon, cross, disabled }) {
   const [modal,setModal]=useState(false)
@@ -14,25 +15,23 @@ function VerifyCode({ text, icon, cross, disabled }) {
     borderColor:"#8920aa"
   };
   
-  const showModal=()=>{
-    setModal(true)
-  }
-  const closeModal=()=>{
-    setModal(false)
-  }
   const handleKeyDown = (event) => {
     if (!(event.key >= '0' && event.key <= '9') && event.key !== 'Backspace' && event.key !== 'Delete' && event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') {
       event.preventDefault();
     }
   };
-
+  const handleClick = () => {
+    if (!disabled) {
+      countDown(); 
+    }
+  };
   return (
     <>
       <div style={{ display: "flex", padding: "1rem" }}>
         <div>
           <Text style={{ display: "block" }}>{text}</Text>
           <Space>
-          <InputNumber
+          <Input
               maxLength={1}
               max={9}
               min={0}
@@ -41,7 +40,7 @@ function VerifyCode({ text, icon, cross, disabled }) {
               disabled={disabled}
               onKeyDown={handleKeyDown}
             />
-            <InputNumber
+            <Input
               maxLength={1}
               max={9}
               min={0}
@@ -50,33 +49,37 @@ function VerifyCode({ text, icon, cross, disabled }) {
               disabled={disabled}
               onKeyDown={handleKeyDown}
             />
-            <InputNumber
+            <Input
               maxLength={1}
-              minLength={0}
+              min={0}
+              max={9}
               style={widthInput}
               controls={false}
               disabled={disabled}
               onKeyDown={handleKeyDown}
             />
-            <InputNumber
+            <Input
               maxLength={1}
-              minLength={0}
+              min={0}
+              max={9}
               style={widthInput}
               controls={false}
               disabled={disabled}
               onKeyDown={handleKeyDown}
             />
-            <InputNumber
+            <Input
               maxLength={1}
-              minLength={0}
+              min={0}
+              max={9}
               style={widthInput}
               controls={false}
               disabled={disabled}
               onKeyDown={handleKeyDown}
             />
-            <InputNumber
+            <Input
               maxLength={1}
-              minLength={0}
+              min={0}
+              max={9}
               style={widthInput}
               controls={false}
               disabled={disabled}
@@ -90,14 +93,11 @@ function VerifyCode({ text, icon, cross, disabled }) {
       </div>
       <Typography.Text
         className="Verification-Text"
-        onClick={showModal}
+      onClick={handleClick} 
         disabled={disabled}
       >
         Resend Code
       </Typography.Text>
-      {
-        modal&&!disabled&&<InformationMessage closeModal={closeModal}/>
-      }
     </>
   );
 }
