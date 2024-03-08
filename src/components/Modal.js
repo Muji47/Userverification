@@ -1,6 +1,8 @@
 import { Modal } from "antd";
-const InformationMessage = () => {
-  let secondsToGo = 5;
+
+const InformationMessage = ({closeModal}) => {
+  
+  let secondsToGo = 2;
   const modal = Modal.success({
     title: 'Resend Code',
     content: `Wait! for 30 sec verification code sending to you.`,
@@ -11,6 +13,7 @@ const InformationMessage = () => {
   setTimeout(() => {
     clearInterval(timer);
     modal.destroy();
+    closeModal()
   }, secondsToGo * 1000);
 };
 export default InformationMessage;
