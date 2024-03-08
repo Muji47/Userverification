@@ -2,13 +2,14 @@ import React from "react";
 import { Typography, Button, Form, Select, Input, Space } from "antd";
 import "../style.css";
 
-function InviteUser({ onFinish }) {
+function InviteUser({onFinish}) {
   const { Title, Text } = Typography;
   const position2 = {
     position: "absolute",
     bottom: "10px",
     right: "10%",
   };
+
   const onFinishFailed = (errorInfo) => {
     console.log("Failed:", errorInfo);
   };
@@ -61,24 +62,29 @@ function InviteUser({ onFinish }) {
               className="inputData"
             />
           </Form.Item>
-          <Select
-            className="inputData"
-            size={"large"}
-            defaultValue="User Type"
+          <Form.Item
+            name="userType1"
             rules={[
               {
                 required: true,
-                message: "Please select one!",
+                message: "Please select a user type!",
               },
             ]}
-            style={{
-              width: 200,
-              margin: "auto 20px ",
-              borderRadius: "10px",
-            }}
-            options={options}
-            popupClassName="custom-dropdown"
-          />
+            style={{marginTop:"30px"}}
+          >
+            <Select
+              className="inputData"
+              size={"large"}
+              defaultValue="User Type"
+              style={{
+                width: 200,
+                margin: "auto 20px ",
+                borderRadius: "10px",
+              }}
+              options={options}
+              popupClassName="custom-dropdown"
+            />
+          </Form.Item>
         </Space>
         <Space>
           <Form.Item
@@ -100,24 +106,29 @@ function InviteUser({ onFinish }) {
               className="inputData"
             />
           </Form.Item>
-          <Select
-            className="inputData"
-            size={"large"}
-            defaultValue="User Type"
+          <Form.Item
+            name="userType2"
             rules={[
               {
                 required: true,
-                message: "Please select one!",
+                message: "Please select a user type!",
               },
             ]}
-            style={{
-              width: 200,
-              margin: "auto 20px ",
-              borderRadius: "10px",
-            }}
-            options={options}
-            popupClassName="custom-dropdown"
-          />
+            style={{marginTop:"30px"}}
+          >
+            <Select
+              className="inputData"
+              size={"large"}
+              defaultValue="User Type"
+              style={{
+                width: 200,
+                margin: "auto 20px ",
+                borderRadius: "10px",
+              }}
+              options={options}
+              popupClassName="custom-dropdown"
+            />
+          </Form.Item>
         </Space>
         <Space>
           <Form.Item
@@ -139,26 +150,32 @@ function InviteUser({ onFinish }) {
               className="inputData"
             />
           </Form.Item>
-          <Select
-            className="inputData"
-            size={"large"}
-            defaultValue="User Type"
+          <Form.Item
+            name="userType3"
             rules={[
               {
                 required: true,
-                message: "Please select one!",
+                message: "Please select a user type!",
               },
             ]}
-            style={{
-              width: 200,
-              margin: "auto 20px ",
-              borderRadius: "10px",
-            }}
-            options={options}
-            popupClassName="custom-dropdown"
-          />
+            style={{marginTop:"30px"}}
+          >
+            <Select
+              className="inputData"
+              size={"large"}
+              defaultValue="User Type"
+              style={{
+                width: 200,
+                display:"flex",
+                margin: "auto 20px ",
+                borderRadius: "10px",
+              }}
+              options={options}
+              popupClassName="custom-dropdown"
+            />
+          </Form.Item>
         </Space>
-        <Button className="page-btn" style={position2} htmlType="submit">
+        <Button  htmlType="submit" className="page-btn" style={position2}>
           Almost & Finish
         </Button>
       </Form>
