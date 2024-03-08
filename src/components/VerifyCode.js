@@ -11,6 +11,7 @@ function VerifyCode({ text, icon, cross, disabled }) {
     height: "40px",
     borderRadius: "5px",
     margin: "10px 0",
+    borderColor:"#8920aa"
   };
   
   const showModal=()=>{
@@ -95,7 +96,7 @@ function VerifyCode({ text, icon, cross, disabled }) {
         Resend Code
       </Typography.Text>
       {
-        modal&&!disabled&&<InformationMessage/>
+        modal&&!disabled&&<InformationMessage closeModal={closeModal}/>
       }
     </>
   );
