@@ -188,7 +188,10 @@
 .back-btn {
   float: left;
 }
-
+.ant-btn-primary{
+  border-color: #8920aa !important;
+  background-color: #8920aa !important;
+}
 .ant-steps-item-finish>.ant-steps-item-container>.ant-steps-item-tail::after,.ant-btn-primary {
   background-color: #8920aa !important;
 }
@@ -218,6 +221,10 @@
 .ant-input-number-group > .ant-input-number:first-child, .ant-input-number-group-addon:first-child{
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
+  border-color: #8920aa !important;
+}
+.ant-select-single.ant-select-lg:not(.ant-select-customize-input) .ant-select-selector,.inputData{
+  border-color: #8920aa !important;
 }
 .inputData:hover .ant-input-prefix,
 .inputData:focus .ant-input-prefix,
