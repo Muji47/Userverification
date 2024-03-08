@@ -27,6 +27,7 @@ function CompanyInfo({ onFinish }) {
   };
   const adjustInput = {
     borderRadius: "10px",
+    borderColor:"#8920aa"
   };
   const options = [
     {
@@ -188,6 +189,7 @@ function CompanyInfo({ onFinish }) {
           <Col xs={12} sm={12} md={12} lg={12}>
             <Form.Item
               name="Phone"
+         
             >
               <InputNumber
                 addonBefore="+61"
