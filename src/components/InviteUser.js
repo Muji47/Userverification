@@ -52,6 +52,7 @@ function InviteUser({ onFinish }) {
               },
             ]}
           >
+            
             <Input
               allowClear
               style={adjustInput}
@@ -135,6 +136,7 @@ function InviteUser({ onFinish }) {
               style={adjustInput}
               placeholder="Email"
               size="large"
+              className="inputData"
             />
           </Form.Item>
           <Select
