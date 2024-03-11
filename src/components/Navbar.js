@@ -7,7 +7,9 @@ function Navbar({setCurrent,current}) {
   
   return (
     <div className="header">
+      <a href='/'>
         <img src='./asset/logo.png' width={"140px"} alt="Logo"/>
+        </a>
         <Steps
       progressDot
       current={current}
