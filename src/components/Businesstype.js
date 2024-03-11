@@ -23,6 +23,7 @@ function Businesstype() {
               src="./asset/coffeeshop.jpg"
               businessName="Coffe Cafe"
               imageSize={imageSize}
+
             />
           </Col>
           <Col offset={2}>
@@ -30,6 +31,7 @@ function Businesstype() {
               src="./asset/pizzashop.jpg"
               businessName="Pizza Shop"
               imageSize={imageSize}
+
             />
           </Col>
           <Col offset={2}>
@@ -37,6 +39,7 @@ function Businesstype() {
               src="./asset/truckshop.jpg"
               businessName="Food Truck"
               imageSize={imageSize}
+
             />
           </Col>
           <Col offset={2}>
