@@ -260,6 +260,8 @@ function CompanyInfo({ onFinish }) {
                 placeholder="Zip code"
                 size="large"
                 className="inputData"
+                onKeyDown={handleKeyDown}
+                maxLength={5}
               />
             </Form.Item>
           </Col>
@@ -273,7 +275,7 @@ function CompanyInfo({ onFinish }) {
                 popupClassName="custom-dropdown"
                 placement="bottomLeft"
                 rules={[
-                  { required: true, message: "Please enter select country!" },
+                  { required: true, message: "Please select country!" },
                 ]}
               />
             </Form.Item>

@@ -2,10 +2,8 @@ import React from "react";
 import { Input, Space, Typography } from "antd";
 import countDown from "./Modal"
 import "../style.css";
-import { useState } from "react";
 
 function VerifyCode({ text, icon, cross, disabled }) {
-  const [modal,setModal]=useState(false)
   const { Text } = Typography;
   const widthInput = {
     width: "40px",
